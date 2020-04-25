@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>博客管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="./static/css/typo.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+    <link rel="stylesheet" href="static/css/me.css">
+    <link rel="stylesheet" href="./static/lib/tocbot/tocbot.css">
+    <link rel="stylesheet" href="./static/lib/prism/prism.css">
+</head>
+<body>
+
+    <!--导航-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small"> <!--导航栏，-->
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog</h2><!--i是图标-->
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini clone icon"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini info icon"></i>关于我</a>
+                <div class="m-item right item m-mobile-hide">
+                    <div class="ui icon input">
+                        <i class="search icon"></i>
+                        <input type="text" placeholder="Search....">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu black toggle icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--中间内容-->
+    <div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn">
+        <div class="ui container">
+            <div class="ui top attached segment">
+                <div class="ui horizontal link list">
+                    <div class="item">
+                        <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                        <div class="content"><a href="#" class="header">陈模</a></div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar icon"></i> 2020-4-23
+                    </div>
+                    <div class="item">
+                        <i class="eye icon"></i> 2342
+                    </div>
+                </div>
+            </div>
+            <div class="ui attached segment">
+               <!-- 图片区域-->
+                <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui fluid rounded mage ">
+            </div>
+            <div class="ui attached padded segment ">
+                <!--内容-->
+                <div class="ui right aligned basic segment">
+                    <div class="ui orange basic label">原创</div>
+                </div>
+
+                <h2 class="ui center aligned header">关于刻意练习的清单</h2>
+                <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large" >
+
+                    <p>最近在读刻意练习这本书，觉得还不错</p>
+
+                    <pre><code class="language-css">p { color: red}</code></pre>
+
+                    <h2>1</h2>
+                    <p>很好很好</p>
+                </div>
+
+                <!--标签-->
+                <div class="m-padded-lr-reponsive">
+                    <div class="ui basic teal left pointing label">方法论</div>
+                </div>
+                <!--赞赏-->
+                <div class="ui center aligned basic segment">
+                    <button id="payButton" class="ui orange basic circular button">赞赏</button>
+                </div>
+                <div class="ui payQR flowing popup top left transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit !important;"><!--赞赏的图片-->
+                            <div class="image">
+                                <img src="./static/images/pn.jpg" alt="" class="ui  rounded bordered image" style="width: 120px">
+                                <div>支付宝</div>
+                            </div>
+                            <div class="image">
+                                <img src="./static/images/pn.jpg" alt="" class="ui  rounded bordered image" style="width: 120px">
+                                <div>微信</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ui attached positive message">
+                <!--博客信息-->
+                <div class="ui middle aligned grid">
+                    <div class="eleven wide column">
+                        <ui class="list">
+                            <li>作者：陈模（联系作者）</li>
+                            <li>发表作品：2020-4-23</li>
+                            <li>版权声明：自由转载-非商用-非衍生-保持署名</li>
+                            <li>公众号转载：请在文末添加作者公众号二维码</li>
+                        </ui>
+                    </div>
+                    <div class="five wide column">
+                        <img src="./static/images/pn.jpg" alt="" class="ui right floated rounded bordered image" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <div id="comment-container" class="ui bottom attached segment">
+                <!--留言区域列表-->
+                <div class="ui threaded comments">
+                    <h3 class="ui dividing header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注释</font></font></h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="/images/avatar/small/matt.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马特</font></font></a>
+                            <div class="metadata">
+                                <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">今天下午5:42</font></font></span>
+                            </div>
+                            <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                多么艺术！
+                            </font></font></div>
+                            <div class="actions">
+                                <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="/images/avatar/small/elliot.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">傅lio</font></font></a>
+                            <div class="metadata">
+                                <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">昨天上午12:30</font></font></span>
+                            </div>
+                            <div class="text">
+                                <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这对我的研究非常有用。</font><font style="vertical-align: inherit;">也谢谢！</font></font></p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="/images/avatar/small/jenny.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">珍妮·赫斯（Jenny Hess）</font></font></a>
+                                    <div class="metadata">
+                                        <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在</font></font></span>
+                                    </div>
+                                    <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        艾略特，你总是很正确:)
+                                    </font></font></div>
+                                    <div class="actions">
+                                        <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="/images/avatar/small/joe.jpg">
+                        </a>
+                        <div class="content">
+                            <a class="author"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乔·亨德森</font></font></a>
+                            <div class="metadata">
+                                <span class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5天前</font></font></span>
+                            </div>
+                            <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                杜德，太棒了。</font><font style="vertical-align: inherit;">非常感谢
+                            </font></font></div>
+                            <div class="actions">
+                                <a class="reply"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回复</font></font></a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="ui reply form">
+                        <div class="field">
+                            <textarea name="content" placeholder="请输入评论信息" ></textarea>
+                        </div>
+                        <div class="fields">
+                            <div class="field m-mobile-wide m-margin-bottom-small">
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="text" name="nickname" placeholder="姓名">
+                                </div>
+                            </div>
+                            <div class="field m-mobile-wide m-margin-bottom-small">
+                                <div class="ui left icon input">
+                                    <i class="mail icon"></i>
+                                    <input type="text" name="email" placeholder="邮箱">
+                                </div>
+                            </div>
+                            <div class="field m-mobile-wide m-margin-bottom-small">
+                                <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--留言区域结束-->
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
+        <div class="ui vertical icon buttons">
+            <button type="button" class="ui toc teal button">目录</button>
+            <a href="#comment-container" class="ui teal button">留言</a>
+            <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+            <div id="toTop-button" class="ui icon button"><i class="chevron up icon"></i></div>
+        </div>
+    </div>
+
+    <!--浮标目录-->
+    <div class="ui top-container flowing popup top left transition hidden" style="width: 250px !important;">
+
+        <ol class="js-toc">
+
+        </ol>
+    </div>
+
+    <div id="qrcode" class="ui wechat-qr flowing popup transition hidden " style="width: 130px">
+<!--        <img src="./static/images/pn.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+
+    <!--底部footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive"><!--垂直的，没有圆角-->
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid"><!--移动端适应-->
+                 <div class="three wide column"><!--第一栏-->
+                     <div class="ui inverted link list ">
+                        <div class="item">
+                            <img src="static/images/QQ图片20200422221116.jpg" class="ui rounded image" alt="" style="width: 100px">
+                        </div>
+                     </div>
+                </div>
+                <div class="three wide column"><!--第二栏-->
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                    <div class="ui inverted link list">
+                            <a href="#" class="item">用户故事(User Story)</a>
+                            <a href="#" class="item">用户故事(User Story)</a>
+                            <a href="#" class="item">用户故事(User Story)</a>
+                    </div>
+                </div>
+                <div class="three wide column"><!--第三栏-->
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email：964660633@qq.com</a>
+                        <a href="#" class="item">QQ：964660633</a>
+                    </div>
+                </div>
+                <div class="seven wide column"><!--第四栏-->
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客，会分享关于编程、写作、思考相关的任何内容,希望可以给</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Free & Open Source (MIT)</p>
+        </div>
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<script src="./static/lib/prism/prism.js"></script>
+<script src="./static/lib/tocbot/tocbot.min.js"></script>
+<script src="./static/lib/qrcode/qrcode.min.js"></script>
+<script src="./static/lib/waypoints/jquery.waypoints.min.js"></script>
+
+
+    <script>
+     $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+     });
+
+     $('#payButton').popup({
+         popup : $('.payQR.popup'),
+         on : 'click',
+         position: 'bottom center'
+     });
+     $('.wechat').popup({
+         popup : $('.wechat-qr'),
+         on : 'click',
+         position: 'left center'
+     });
+     tocbot.init({
+         // Where to render the table of contents.
+         tocSelector: '.js-toc',
+         // Where to grab the headings to build the table of contents.
+         contentSelector: '.js-toc-content',
+         // Which headings to grab inside of the contentSelector element.
+         headingSelector: 'h1, h2, h3',
+         // For headings inside relative or absolute positioned containers within content.
+         hasInnerContainers: true,
+     });
+
+     $('.toc.button').popup({
+         popup : $('.top-container.popup'),
+         on : 'click',
+         position: 'left center'
+     });
+
+     var qrcode = new QRCode("qrcode", {
+         text: "http://jindo.dev.naver.com/collie",
+         width: 100,
+         height: 100,
+         colorDark : "#000000",
+         colorLight : "#ffffff",
+         correctLevel : QRCode.CorrectLevel.H
+     });
+
+     $('#toTop-button').click(function () {
+        $(window).scrollTo(0,500);
+     });
+
+     var waypoint = new Waypoint({
+         element: document.getElementById('waypoint'),
+         handler: function(direction) {
+             if (direction == 'down'){
+                 $('#toolbar').show(500);
+             } else {
+                 $('#toolbar').hide(500);
+             }
+             console.log('Scrolled to waypoint!' + direction);
+         }
+     })
+ </script>
+</body>
+</html>
